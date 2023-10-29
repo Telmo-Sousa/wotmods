@@ -1,0 +1,9 @@
+{
+    "common": {
+        "loginNotificationEnabled": true
+    }, 
+    "reticle": {
+        "disableGunMarkerMinimumSize": true, 
+        "correctionFactor": 1.0
+    }
+}

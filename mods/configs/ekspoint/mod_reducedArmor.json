@@ -1,0 +1,68 @@
+﻿/*
+	Приведённая броня танка
+	Redused tank armor
+*/
+{
+    // true - включить модуль. (только посылка данных в файл прицела)
+	// true - enable the module. (only sending data to a sight file)
+    "enable": true,
+	
+	// Использовать собственный flash для вывода данных.
+    // Use own flash for data output.
+	"custom_flash": true,
+	
+	// Набор цветов относительно текущего шанса пробития
+	// Colors set relative to the current chance of penetrate
+    "colors": {
+	    // пробить
+	    "green":"#7dd307",
+	    // возможно пробить
+        "orange":"#FF9900",
+	    // не пробить
+        "red":"#8379fd"
+    },
+	
+	// Отображать только при наведении на врагов
+	// Display only on enemy targets
+    "enemysOnly": true,
+	
+	// Текст надписи 
+	//   {armor} - толщина брони/экрана
+	//   {calcedArmor} - приведённая
+	//   {piercingPower} - пробитие текущим снарядом
+	//   {enemyDistance} - дистанция до врага
+	//   {maxShotDistance} - максимальная дистанция полёта снаряда
+	//   {colors} - динамический цвет относительно шанса пробития
+	//   {piercingReserve} - резерв пробития (piercingPower - calcedArmor)
+	// Label text indicator
+    "pattern": "<font face='$FieldFont' color='{colors}' size='18'>{calcedArmor} | {piercingPower}</font>",
+	
+	// Позиция индикатора на экране
+	// Отдельно для аркадного и снайперского режима
+    "position": {
+        "arcade": { 
+		    "alignX": "center", // горизонтальное выравнивание [left, center, right]
+            "alignY": "center", // вертикальное выравнивания [top, center, bottom]
+			"x": -40,
+            "y": 180
+        },		
+        "sniper": { 
+		    "alignX": "center", // горизонтальное выравнивание [left, center, right]
+            "alignY": "center", // вертикальное выравнивания [top, center, bottom]
+			"x": -40,
+            "y": 220
+        }		
+    },
+	
+	// Настройки тени текста  надписи индикатора
+	// Shadow settings label text indicator
+    "shadow": {
+        "alpha": 100,
+        "angle": 90,
+        "color": "#000000",
+        "distance": 0,
+        "enable": true,
+        "size": 2,
+        "strength": 200
+    }
+}
